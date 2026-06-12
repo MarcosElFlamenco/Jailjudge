@@ -4,7 +4,7 @@ from baseline.GCG.minimal_gcg.opt_utils import token_gradients, sample_control, 
 from baseline.GCG.minimal_gcg.opt_utils import  get_filtered_cands
 from baseline.GCG.minimal_gcg.string_utils import SuffixManager, load_conversation_template
 import gc
-from GPTEvaluatorAgent.conversers import  load_generator_model
+from GPTEvaluator.conversers import  load_generator_model
 from utils.utils import generate, prefix_check_for_attack_success, agent_check_for_attack_success
 from utils.test_utils import test_prefixes
 

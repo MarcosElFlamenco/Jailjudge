@@ -39,7 +39,7 @@ from baseline.AdvPrompter.utils import load_target_models_advprompter
 from defense import test_smoothLLM, generate_defense_goal
 
 # import evaluation agent
-from GPTEvaluatorAgent.agent_eval import agent_evaluation
+from GPTEvaluator.agent_eval import agent_evaluation
 from judge_agent.judge import init_judges
 
 def generate_attack_result(goal, target, models, device, args, curr_output, jailbreak_judge_model=None):

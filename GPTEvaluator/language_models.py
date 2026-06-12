@@ -11,7 +11,7 @@ import json
 import re
 import emoji
 
-from GPTEvaluatorAgent.common import _extract_json
+from GPTEvaluator.common import _extract_json
 from utils.test_utils import text_process
 
 # def remove_code_blocks(text):

@@ -59,7 +59,7 @@ pip install -r requirements.txt
 
 ### 2.1 OPENAI API Key
 
-There are several baselines that use GPT service in their method. And We also use GPT-4 based agent to evaluate the attack success rate. Please search and replace `YOUR_KEY_HERE` with your OpenAI API key in the following files: `./GPTEvaluatorAgent/language_models.py`, `./baseline/TAP/language_models.py`, `./baseline/PAIR/language_models.py`, `./baseline/GPTFuzz/gptfuzzer/llm/llm.py`, `./baseline/AutoDAN/utils/opt_utils.py`.
+There are several baselines that use GPT service in their method. And We also use GPT-4 based agent to evaluate the attack success rate. Please search and replace `YOUR_KEY_HERE` with your OpenAI API key in the following files: `./GPTEvaluator/language_models.py`, `./baseline/TAP/language_models.py`, `./baseline/PAIR/language_models.py`, `./baseline/GPTFuzz/gptfuzzer/llm/llm.py`, `./baseline/AutoDAN/utils/opt_utils.py`.
 
 After setting the API key, you can run the tricks experiments with one-click scripts below.
 

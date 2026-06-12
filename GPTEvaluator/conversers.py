@@ -1,7 +1,7 @@
-from GPTEvaluatorAgent.language_models import ChatGPT, Claude, PaLM, HuggingFace
+from GPTEvaluator.language_models import ChatGPT, Claude, PaLM, HuggingFace
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, LlamaForCausalLM
-from GPTEvaluatorAgent.config import VICUNA_PATH, LLAMA_PATH, GENERATOR_TEMP, GENERATOR_TOP_P, LLAMA_LORA_MODEL,LORA_WEIGHTS
+from GPTEvaluator.config import VICUNA_PATH, LLAMA_PATH, GENERATOR_TEMP, GENERATOR_TOP_P, LLAMA_LORA_MODEL,LORA_WEIGHTS
 from peft import PeftModel
 import re
 

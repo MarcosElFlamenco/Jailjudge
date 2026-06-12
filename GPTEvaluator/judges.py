@@ -2,9 +2,9 @@ import copy
 
 from fastchat.model import get_conversation_template
 import re
-from GPTEvaluatorAgent.system_prompts import get_evident_judge_system_prompt
+from GPTEvaluator.system_prompts import get_evident_judge_system_prompt
 
-from GPTEvaluatorAgent.language_models import ChatGPT
+from GPTEvaluator.language_models import ChatGPT
 import numpy as np
 
 from utils.test_utils import test_prefixes

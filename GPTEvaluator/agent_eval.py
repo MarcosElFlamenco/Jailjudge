@@ -1,9 +1,9 @@
 import json
 import argparse
-from GPTEvaluatorAgent.main import gpt_agent_evaluation
+from GPTEvaluator.main import gpt_agent_evaluation
 from tqdm import tqdm
-from GPTEvaluatorAgent.judges import GPTAgentJudge
-# from GPTEvaluatorAgent.common import detect_repetitions
+from GPTEvaluator.judges import GPTAgentJudge
+# from GPTEvaluator.common import detect_repetitions
 from utils.test_utils import detect_repetitions
 
 
