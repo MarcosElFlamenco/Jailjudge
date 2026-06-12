@@ -191,7 +191,7 @@ def crossover(str1, str2, num_points):
     # Function to split text into paragraphs and then into sentences
     def split_into_paragraphs_and_sentences(text):
         paragraphs = text.split("\n\n")
-        return [re.split("(?<=[,.!?])\s+", paragraph) for paragraph in paragraphs]
+        return [re.split(r"(?<=[,.!?])\s+", paragraph) for paragraph in paragraphs]
 
     paragraphs1 = split_into_paragraphs_and_sentences(str1)
     paragraphs2 = split_into_paragraphs_and_sentences(str2)
