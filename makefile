@@ -1,6 +1,6 @@
 # Run the JAILJUDGE as attack enhancer for AutoDAN attack
 
-JAILBREAK_JUDGE_METHOD = ours
+JAILBREAK_JUDGE_METHOD = llamaguard1
 ATTACK = AutoDAN
 TARGET_MODEL = vicuna-13b-v1.5
 MODEL_NICKNAME = vicuna

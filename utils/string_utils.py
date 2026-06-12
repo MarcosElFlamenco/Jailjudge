@@ -3,8 +3,8 @@ import json
 import os
 from sklearn.model_selection import train_test_split
 import pandas as pd
-from FastChat.fastchat import model as fsmodel
-from FastChat.fastchat.model.model_adapter import get_model_adapter
+from fastchat import model as fsmodel
+from fastchat.model.model_adapter import get_model_adapter
 
 def load_prompts(instructions_path):
     with open(instructions_path, "r", newline="", encoding="utf-8") as f:
