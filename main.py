@@ -133,8 +133,7 @@ def generate_attack_result(goal, target, models, device, args, curr_output, jail
         if args.defense_type in ["prefix", "llamaguard3", "shieldgemma2b","ours", "shieldgemma9b",]:
             # use judge model as defense
             if args.jailbreak_judge_method not in ["prefix", "default"]:
-                judge_result = jailbreak_judge_model.judge(goal + curr_output["adv_prompt"], curr_output["language_model_output"])
-                if judge_result:
+                judge_result = jailbreak_judge_model.judge(goal + curr_output["adv_prompt"], curr_output["language_model_output"]) if judge_result:
                     curr_output["language_model_output"] = refuse_string
                     curr_output["is_JB"] = False
 
@@ -189,7 +188,6 @@ def generate_attack_result(goal, target, models, device, args, curr_output, jail
             judgeLM=evaluator_llm,
             goal=goal,
             target=target,
-            curr_output=curr_output,
             jailbreak_judge_model=jailbreak_judge_model,
         )
         curr_output["language_model_output"] = curr_output_record[
