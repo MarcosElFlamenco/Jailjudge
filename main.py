@@ -356,6 +356,9 @@ def run(goals, targets, target_model_path, device, args, all_output=[]):#, categ
         models = []
     else:
         raise NameError
+    # After model is loaded...
+    import IPython
+    IPython.embed()
     all_output = test(goals, targets, models, device, args, all_output=all_output, jailbreak_judge_model = jailbreak_judge_model)#, categories=categories)
     return all_output
 
