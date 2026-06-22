@@ -2,14 +2,14 @@
 
 JAILBREAK_JUDGE_METHOD = llamaguard1
 ATTACK = AutoDAN
-TARGET_MODEL = vicuna-13b-v1.5
-MODEL_NICKNAME = vicuna
+TARGET_MODEL = meta-llama/Llama-3.2-1B 
+MODEL_NICKNAME = llama1 
 SAVE_RESULT_PATH = ./exp_results/$(ATTACK)_$(JAILBREAK_JUDGE_METHOD)/$(MODEL_NICKNAME)
 EXP_NAME = $(MODEL_NICKNAME)_$(ATTACK)_$(JAILBREAK_JUDGE_METHOD)
 
 autodan:
 	python -u main.py \
-		--target_model_path lmsys/$(TARGET_MODEL) \
+		--target_model_path $(TARGET_MODEL) \
 		--defense_type None_defense \
 		--attack $(ATTACK) \
 		--instructions_path ./data/HEx-PHI.csv \
@@ -23,10 +23,10 @@ autodan:
 # Run the JAILJUDGE as attack enhancer for PAIR attack
 pair:
 	python -u main.py \
-		--target_model_path lmsys/$(TARGET_MODEL) \
+		--target_model_path $(TARGET_MODEL) \
 		--defense_type None_defense \
 		--attack PAIR \
-		--attack_model lmsys/$(TARGET_MODEL) \
+		--attack_model $(TARGET_MODEL) \
 		--instructions_path ./data/HEx-PHI.csv \
 		--save_result_path $(SAVE_RESULT_PATH) \
 		--agent_evaluation \
@@ -38,7 +38,7 @@ pair:
 # Run the JAILJUDGE as attack enhancer for AmpleGCG attack
 amplegcg:
 	python -u main.py \
-		--target_model_path lmsys/$(TARGET_MODEL) \
+		--target_model_path $(TARGET_MODEL) \
 		--defense_type None_defense \
 		--attack AmpleGCG \
 		--instructions_path ./data/HEx-PHI.csv \
@@ -53,7 +53,7 @@ amplegcg:
 # Run the JAILJUDGE as attack enhancer for AdvPrompter attack
 advprompter:
 	python -u main.py \
-		--target_model_path lmsys/$(TARGET_MODEL) \
+		--target_model_path $(TARGET_MODEL) \
 		--defense_type None_defense \
 		--attack AdvPrompter \
 		--instructions_path ./data/HEx-PHI.csv \
